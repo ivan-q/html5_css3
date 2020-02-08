@@ -1,0 +1,122 @@
+/*Common*/
+@font-face {
+    font-family: Socialico;
+    src: url(../fonts/Socialico.ttf);
+}
+
+$gray: #445161;
+$textColor: #333;
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1280px;
+}
+
+h2 {
+    padding-bottom: 2rem;
+    color: $gray;
+    font-size: 1.875rem;
+}
+
+h2:not([class="about__h2"]) {
+    text-align: center;
+}
+
+p {
+    line-height: 1.5;
+}
+
+.header,
+.about,
+.dignity,
+.screenshots,
+.reviews {
+    overflow: hidden;
+}
+
+/*Left and right paddings for sections*/
+.padd {
+    padding: 50px;
+}
+
+/*Header*/
+header {
+    background-color: $gray;
+    color: #fff;
+}
+
+.header_description {
+    float: left;
+}
+
+.header__h1 {
+    font-size: 59px;
+    line-height: 0.5em;
+    color: #fff;
+    padding-bottom: calc(50px - 7px);
+}
+
+.header__list {
+    list-style: none;
+}
+
+.header__item {
+    background-image: url(../img/check_icon_346.png);
+    background-repeat: no-repeat;
+    background-size: 1.3em;
+    background-position-y: center;
+    padding: 7px 0 7px 2em;
+}
+
+.header_image {
+    float: right;
+}
+
+/*About*/
+
+.about__description {
+    float: left;
+    width: 50%;
+}
+
+.about__p {
+    font-size: 16px;
+    margin-bottom: 1.25em;
+    color: $textColor;
+}
+
+.about__img {
+    float: right;
+}
+
+/*Dignity*/
+.dignity {
+    clear: both;
+    background-color: #f5f5f5;
+}
+
+.dignity__item {
+    width: calc(50% - 41px);
+    float: left;
+    padding-bottom: 2.18em;
+    padding-left: 41px;
+    background-image: url(../img/plus.png);
+    background-repeat: no-repeat;
+    background-position-y: 5px;
+}
+
+.dignity__item:nth-last-child(-n+2){
+    padding-bottom: 0;
+}
+
+
+
+
