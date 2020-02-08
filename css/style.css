@@ -24,6 +24,13 @@ h2:not([class="about__h2"]) {
 p {
   line-height: 1.5; }
 
+ul {
+  list-style-type: none; }
+
+a {
+  text-decoration: none;
+  color: #445161; }
+
 .header,
 .about,
 .dignity,
@@ -156,5 +163,59 @@ header {
   width: 20px;
   height: 20px;
   background-color: #ececec; }
+
+/*Buy*/
+.buy__container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; }
+
+.buy__set {
+  background-color: #445161;
+  min-width: 23.4375%;
+  margin: 0 22px;
+  border-radius: 5px; }
+
+.buy__h3 {
+  font-size: 24px;
+  color: #fff;
+  text-align: center;
+  padding: 17px 0; }
+
+.buy__price {
+  color: #445161;
+  background-color: #fff;
+  border: solid 2px #445161;
+  text-align: center;
+  font-size: 40px; }
+
+.buy__options {
+  line-height: 1.71;
+  color: #fff;
+  margin-left: 14px;
+  padding: 20px; }
+
+.buy__options__item {
+  font-size: 14px; }
+
+.buy__options__item::after {
+  content: ";"; }
+
+.buy__options__item:last-child::after {
+  content: "."; }
+
+.buy__button {
+  background-color: #fff;
+  display: block;
+  padding: 13px 0;
+  margin: 0 20px 20px 20px;
+  text-align: center;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold; }
+
+.buy__button:hover {
+  background-color: #333;
+  color: #fff; }
 
 /*# sourceMappingURL=style.css.map */
