@@ -88,10 +88,11 @@ header {
   background-color: #f5f5f5; }
 
 .dignity__item {
-  width: calc(50% - 41px);
+  width: calc(50% - 84px);
   float: left;
   padding-bottom: 2.18em;
   padding-left: 41px;
+  padding-right: 23px;
   background-image: url(../img/plus.png);
   background-repeat: no-repeat;
   background-position-y: 5px; }
@@ -217,5 +218,78 @@ header {
 .buy__button:hover {
   background-color: #333;
   color: #fff; }
+
+/*Footer*/
+.footer {
+  background-color: #425062;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-between; }
+
+.footer__h2 {
+  color: #fff;
+  padding-top: 53px;
+  flex-basis: 100%; }
+
+.form {
+  display: flex;
+  flex-direction: column; }
+
+.form__send {
+  padding: 14px 48px;
+  font-weight: bold;
+  color: #425062;
+  align-self: center;
+  margin-bottom: 50px; }
+
+.form__send:hover {
+  background-color: #333;
+  color: #fff; }
+
+.form * {
+  border-radius: 5px;
+  border: none; }
+
+.form__field {
+  margin-bottom: 21px;
+  width: 500px;
+  padding: 14px 0 14px 10px; }
+
+.socials {
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  margin-left: 46px; }
+
+.socials__contact {
+  color: #fff;
+  margin-bottom: 20px;
+  padding: 5px 0 5px 28px; }
+
+.socials__buttons {
+  font-family: Socialico;
+  font-size: 62px; }
+
+.skype {
+  background-image: url(../img/skype.png);
+  background-repeat: no-repeat;
+  background-position: 0 1; }
+
+.icq {
+  background-image: url(../img/icq.png);
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  padding-left: 30px; }
+
+.email {
+  background-image: url(../img/email.png);
+  background-repeat: no-repeat;
+  background-position: 0 4px; }
+
+.phone {
+  background-image: url(../img/phone.png);
+  background-repeat: no-repeat;
+  background-position: 0 0; }
 
 /*# sourceMappingURL=style.css.map */
