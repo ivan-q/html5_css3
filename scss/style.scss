@@ -9,6 +9,7 @@ $light: #f5f5f5;
 $textColor: #333;
 $footer: #425062;
 $quoteColor: #ececec;
+$paddCommon: 3.90625%;
 
 * {
     font-family: Arial, Helvetica, sans-serif;
@@ -18,15 +19,11 @@ $quoteColor: #ececec;
     padding: 0;
 }
 
-.container {
-    margin: 0 auto;
-    width: 1280px;
-}
-
 h2 {
     padding-bottom: 2rem;
     color: $gray;
-    font-size: 1.875rem;
+    font-size: 30px;
+    margin-top:-5px;
 }
 
 h2:not([class="about__h2"]) {
@@ -41,9 +38,14 @@ ul {
     list-style-type: none;
 }
 
-a {
+html body a {
     text-decoration: none;
     color: $gray;
+}
+
+html body a:hover {
+    text-decoration: none;
+    color: white;
 }
 
 .header,
@@ -56,7 +58,7 @@ a {
 
 /*Left and right paddings for sections*/
 .padd {
-    padding: 50px;
+    padding: $paddCommon;
 }
 
 /*Header*/
@@ -67,13 +69,14 @@ header {
 
 .header_description {
     float: left;
+    margin-left: 13px;
 }
 
 .header__h1 {
     font-size: 59px;
-    line-height: 0.5em;
     color: #fff;
     padding-bottom: calc(50px - 7px);
+    margin-top: -10px;
 }
 
 .header__list {
@@ -90,13 +93,65 @@ header {
 
 .header_image {
     float: right;
+    /*width: 469px;
+    height: 214px;*/
+    object-fit: cover;
+    object-position: bottom;
+}
+
+@media all and (min-width: 768px) and (max-width: 991px) {
+    .header_image {
+        float: none;
+        margin-top: 40px;
+    }
+}
+
+@media all and (max-width:768px) {
+    .header_image {
+        float: none;
+        margin-top: 40px;
+    }
+}
+
+@media all and (max-width: 991px) {
+    .header_image {
+        float: none;
+    }
+}
+
+@media all and (max-width: 530px) {
+    .header_image {
+        width: 100%;
+    }
+    .header__h1 {
+        font-size: 12vw;
+    }
 }
 
 /*About*/
 
+.about {
+    display: flex;
+    align-content: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 .about__description {
     float: left;
     width: 50%;
+}
+
+@media all and (max-width: 991px) {
+    .about__description {
+        width: 100%;
+    }
+    .about {
+        align-items: center;
+        justify-content: center;
+        
+    min-width: 450px;
+    }
 }
 
 .about__p {
@@ -149,6 +204,8 @@ header {
 
 .screenshots__h3 {
     padding-bottom: 15px;
+    color: $gray;
+    font-size: 24px;
 }
 
 .screenshots__p {
@@ -168,9 +225,6 @@ header {
     width: calc(50% - 16px);
     float: left;
     margin-bottom: 24px;
-}
-
-.reviews__article:nth-child(odd) {
 }
 
 .reviews__article:nth-child(even) {
@@ -201,6 +255,7 @@ header {
     margin-left: 28px;
     position: relative;
     border-radius: 6px;
+    color: $textColor;
 }
 
 .reviews__arrow {
@@ -214,10 +269,15 @@ header {
 }
 
 /*Buy*/
-.buy__container {
+.buy {
+    padding: 0;
+}
+
+.buy__wrap {
     display: flex;
     justify-content: center;
     align-items: flex-end;
+    flex-wrap: wrap;
 }
 
 .buy__set {
@@ -225,6 +285,11 @@ header {
     min-width: 23.4375%;
     margin: 0 22px;
     border-radius: 5px;
+    margin-bottom: 50px;
+}
+
+.buy__h2 {
+    margin-top: $paddCommon;
 }
 
 .buy__h3 {
@@ -322,11 +387,32 @@ header {
     padding: 14px 0 14px 10px;
 }
 
+@media all and (max-width:992px) {
+    .form__field {
+        width: 80vw;
+    }
+    .socials {
+        justify-content: center;
+        align-items: center;
+        margin-top: 67px;
+    }
+}
+
 .socials {
     display: flex;
     flex-direction: column;
     color: #fff;
-    margin-left: 46px;
+}
+
+@media all and (min-width:992px) {
+    .socials {
+        margin-left: 46px;
+    }
+}
+
+.socials__wrap {
+    display: flex;
+    flex-direction: column;
 }
 
 .socials__contact {
