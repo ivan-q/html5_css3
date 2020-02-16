@@ -39,6 +39,9 @@ html body a:hover {
 .reviews {
   overflow: hidden; }
 
+@media all and (max-width: 500px) {
+  .padd {
+    padding: 0; } }
 /*Left and right paddings for sections*/
 .padd {
   padding: 3.90625%; }
@@ -71,7 +74,7 @@ header {
 .header_image {
   float: right;
   /*width: 469px;
-  height: 214px;*/
+    height: 214px;*/
   object-fit: cover;
   object-position: bottom; }
 
@@ -86,12 +89,23 @@ header {
 @media all and (max-width: 991px) {
   .header_image {
     float: none; } }
-@media all and (max-width: 530px) {
+@media all and (max-width: 500px) {
   .header_image {
-    width: 100%; }
+    width: 90vw;
+    align-self: center;
+    flex-basis: 100%; }
 
   .header__h1 {
-    font-size: 12vw; } }
+    font-size: 12vw;
+    padding-top: 22px; }
+
+  .container {
+    width: 100vw; }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; } }
 /*About*/
 .about {
   display: flex;
@@ -110,7 +124,7 @@ header {
   .about {
     align-items: center;
     justify-content: center;
-    min-width: 450px; } }
+    min-width: 360px; } }
 .about__p {
   font-size: 16px;
   margin-bottom: 1.25em;
@@ -119,13 +133,20 @@ header {
 .about__img {
   float: right; }
 
+@media all and (max-width: 450px) {
+  .about__img {
+    width: 100%; }
+
+  .container {
+    padding-left: 0;
+    padding-right: 0; } }
 /*Dignity*/
 .dignity {
   clear: both;
   background-color: #f5f5f5; }
 
 .dignity__item {
-  width: calc(50% - 84px);
+  width: 50%;
   float: left;
   padding-bottom: 2.18em;
   padding-left: 41px;
@@ -134,9 +155,42 @@ header {
   background-repeat: no-repeat;
   background-position-y: 5px; }
 
-.dignity__item:nth-last-child(-n+2) {
+.dignity__item:nth-child(even) {
+  float: right; }
+
+.dignity__item:nth-last-child(-n + 2) {
   padding-bottom: 0; }
 
+@media all and (max-width: 768px) {
+  .dignity__item {
+    width: 100%;
+    min-width: 360px;
+    float: none; }
+
+  .dignity__item:nth-last-child(-n + 2) {
+    padding-bottom: 2.18em; }
+
+  .dignity__item:last-child {
+    padding-bottom: 0; } }
+@media all and (max-width: 500px) {
+  .dignity__item:nth-last-child(-n + 2) {
+    padding-bottom: 0; }
+
+  .dignity__item:nth-child(even) {
+    float: none; }
+
+  .dignity {
+    width: 100%;
+    margin: 0; }
+
+  .dignity__item {
+    padding-right: 28px; }
+
+  .dignity__item:nth-last-child(-n + 2) {
+    padding-bottom: 2.18em; }
+
+  .dignity__item:last-child {
+    padding-bottom: 0; } }
 /*Screenshots*/
 .screenshots__img {
   float: left;
@@ -144,20 +198,54 @@ header {
 
 .screenshots__article {
   float: left;
-  width: calc(50% - 23px);
-  margin: 0 8px 30px 0; }
+  width: calc(50% - 32px);
+  margin: 0 16px 30px 0; }
 
-.screenshots__article:nth-last-child(-n+2) {
+.screenshots__article:last-child {
   margin-bottom: 0; }
 
 .screenshots__h3 {
-  padding-bottom: 15px;
   color: #445161;
-  font-size: 24px; }
+  font-size: 21px;
+  margin-top: -4px;
+  padding-bottom: 4px; }
 
 .screenshots__p {
-  font-size: 16px; }
+  font-size: 14px;
+  line-height: 1.5; }
 
+@media all and (max-width: 1200px) {
+  .screenshots__article {
+    width: 100%;
+    min-width: 300px; } }
+@media all and (max-width: 500px) {
+  .screenshots__article {
+    position: relative;
+    padding-top: 35px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 50px; }
+
+  .screenshots__h3 {
+    position: absolute;
+    top: 0;
+    font-size: 24px; }
+
+  .screenshots__img {
+    width: 100vw;
+    padding-right: 10px; }
+
+  .screenshots__p {
+    clear: both;
+    font-size: 16px;
+    margin-top: 10px; }
+
+  .screenshots {
+    margin: 10px; }
+
+  h2 {
+    margin-top: 23px; } }
 /*Reviews*/
 .reviews {
   background-color: #f5f5f5;
@@ -174,7 +262,7 @@ header {
 .reviews__article:nth-child(even) {
   float: right; }
 
-.reviews__article:nth-last-child(-n+2) {
+.reviews__article:nth-last-child(-n + 2) {
   margin-bottom: 0; }
 
 .reviews__img {
@@ -205,6 +293,26 @@ header {
   height: 20px;
   background-color: #ececec; }
 
+@media all and (max-width: 500px) {
+  .reviews {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+
+  .reviews__article {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%; }
+
+  .reviews__quote {
+    margin-left: 0;
+    margin-top: 28px; }
+
+  .reviews__arrow {
+    top: -10px;
+    left: calc(50% - 12px); } }
 /*Buy*/
 .buy {
   padding: 0; }
