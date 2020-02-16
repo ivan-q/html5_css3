@@ -60,12 +60,6 @@ html body a:hover {
   .padd {
     padding: 0;
   }
-  .header,
-  .about,
-  .dignity,
-  .screenshots,
-  .reviews {
-  }
 }
 
 /*Left and right paddings for sections*/
@@ -134,8 +128,7 @@ header {
 @media all and (max-width: 500px) {
   .header_image {
     width: 90vw;
-    align-self: center;
-    flex-basis: 100%;
+    float: left;
   }
   .header__h1 {
     font-size: 12vw;
@@ -148,6 +141,7 @@ header {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    padding-right: 0;
   }
 }
 
@@ -186,12 +180,15 @@ header {
   float: right;
 }
 
-@media all and (max-width: 450px) {
+@media all and (max-width: 500px) {
   .about__img {
     width: 100%;
   }
   .container {
     padding-left: 0;
+    padding-right: 0;
+  }
+  .about {
     padding-right: 0;
   }
 }
@@ -224,7 +221,10 @@ header {
 @media all and (max-width: 768px) {
   .dignity__item {
     width: 100%;
-    min-width: 360px;
+    min-width: 300px;
+    float: none;
+  }
+  .dignity__item:nth-child(even) {
     float: none;
   }
   .dignity__item:nth-last-child(-n + 2) {
@@ -242,10 +242,11 @@ header {
   .dignity__item:nth-child(even) {
     float: none;
   }
+  
   .dignity {
-    width: 100%;
-    margin: 0;
+    width: 100vw;
   }
+
   .dignity__item {
     padding-right: 28px;
   }
@@ -258,6 +259,10 @@ header {
 }
 
 /*Screenshots*/
+
+.screenshots {
+    margin-bottom: 10px;
+}
 
 .screenshots__img {
   float: left;
@@ -286,14 +291,14 @@ header {
   line-height: 1.5;
 }
 
-@media all and (max-width: 1200px) {
+@media all and (max-width: 992px) {
   .screenshots__article {
     width: 100%;
     min-width: 300px;
   }
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 550px) {
   .screenshots__article {
     position: relative;
     padding-top: 35px;
@@ -308,8 +313,8 @@ header {
     font-size: 24px;
   }
   .screenshots__img {
-    width: 100vw;
     padding-right: 10px;
+    align-self: flex-start;
   }
   .screenshots__p {
     clear: both;
@@ -327,7 +332,9 @@ header {
 /*Reviews*/
 .reviews {
   background-color: $light;
-  font-size: 14px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-bottom: 40px;
 }
 
 .reviews__article {
@@ -368,6 +375,7 @@ header {
   position: relative;
   border-radius: 6px;
   color: $textColor;
+  font-size: 14px;
 }
 
 .reviews__arrow {
@@ -380,7 +388,7 @@ header {
   background-color: $quoteColor;
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 992px) {
   .reviews {
     display: flex;
     flex-direction: column;
@@ -396,12 +404,20 @@ header {
   .reviews__quote {
     margin-left: 0;
     margin-top: 28px;
+    font-size: 14px;
   }
   .reviews__arrow {
     top: -10px;
     left: calc(50% - 12px);
   }
 }
+
+@media all and (max-width: 500px) {
+    .reviews {
+        padding-left: 0;
+        padding-right: 0;
+    }
+} 
 
 /*Buy*/
 .buy {
@@ -587,5 +603,27 @@ header {
 }
 
 @media all and (min-width: 500px) and (max-width: 992px) {
+    .screenshots__h2 {
+        margin-top: 50px;
+    }
+    .reviews__h2 {
+        padding-top: 50px;
+    }
+    .screenshots {
+        margin-bottom: 50px;
+    }
+    .reviews__quote {
+        font-size: 14px;
+    }
+    
+}
 
+@media all and (min-width: 992px) {
+    .screenshots__h2 {
+        margin-top: 50px;
+    }
+    .reviews__h2 {
+        padding-top: 50px;
+    }
+    
 }
