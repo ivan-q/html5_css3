@@ -105,6 +105,16 @@ header {
   object-position: bottom;
 }
 
+video {
+    width: 469px;
+    float: right;
+}
+
+video:focus {
+    border: none;
+    outline: none;
+}
+
 @media all and (min-width: 768px) and (max-width: 991px) {
   .header_image {
     float: none;
@@ -129,6 +139,7 @@ header {
   .header_image {
     width: 90vw;
     float: left;
+    margin-left: 13px;
   }
   .header__h1 {
     font-size: 12vw;
@@ -170,6 +181,12 @@ header {
   }
 }
 
+@media all and (max-width:500px) {
+    .about__p {
+        width: 90%;
+    }
+}
+
 .about__p {
   font-size: 16px;
   margin-bottom: 1.25em;
@@ -183,6 +200,7 @@ header {
 @media all and (max-width: 500px) {
   .about__img {
     width: 100%;
+    float: none;
   }
   .container {
     padding-left: 0;
@@ -536,6 +554,12 @@ header {
   margin-bottom: 21px;
   width: 500px;
   padding: 14px 0 14px 10px;
+}
+
+input:focus,
+textarea:focus {
+    border: none;
+    outline: none;
 }
 
 @media all and (max-width: 992px) {
