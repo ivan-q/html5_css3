@@ -48,18 +48,17 @@ html body a:hover {
   color: white;
 }
 
+.container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
 .header,
 .about,
 .dignity,
 .screenshots,
 .reviews {
   overflow: hidden;
-}
-
-@media all and (max-width: 500px) {
-  .padd {
-    padding: 0;
-  }
 }
 
 /*Left and right paddings for sections*/
@@ -75,14 +74,15 @@ header {
 
 .header_description {
   float: left;
-  margin-left: 13px;
 }
+
 
 .header__h1 {
   font-size: 59px;
   color: #fff;
   padding-bottom: calc(50px - 7px);
   margin-top: -10px;
+  margin-left: -3px;
 }
 
 .header__list {
@@ -106,13 +106,13 @@ header {
 }
 
 video {
-    width: 469px;
-    float: right;
+  width: 469px;
+  float: right;
 }
 
 video:focus {
-    border: none;
-    outline: none;
+  border: none;
+  outline: none;
 }
 
 @media all and (min-width: 768px) and (max-width: 991px) {
@@ -125,6 +125,7 @@ video:focus {
 @media all and (max-width: 768px) {
   .header_image {
     float: none;
+    width: 90%;
     margin-top: 40px;
   }
 }
@@ -132,27 +133,25 @@ video:focus {
 @media all and (max-width: 991px) {
   .header_image {
     float: none;
-  }
+    margin: 0 auto;
+    }
 }
 
 @media all and (max-width: 500px) {
   .header_image {
-    width: 90vw;
-    float: left;
-    margin-left: 13px;
+    width: 90%;
+    margin: 0;
   }
   .header__h1 {
     font-size: 12vw;
     padding-top: 22px;
   }
-  .container {
-    width: 100vw;
-  }
+
   .header {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding-right: 0;
+    padding-right: $paddCommon * 2;
   }
 }
 
@@ -177,14 +176,7 @@ video:focus {
   .about {
     align-items: center;
     justify-content: center;
-    min-width: 360px;
   }
-}
-
-@media all and (max-width:500px) {
-    .about__p {
-        width: 90%;
-    }
 }
 
 .about__p {
@@ -200,14 +192,16 @@ video:focus {
 @media all and (max-width: 500px) {
   .about__img {
     width: 100%;
-    float: none;
+    float: left;
   }
-  .container {
-    padding-left: 0;
-    padding-right: 0;
-  }
+
   .about {
     padding-right: 0;
+  }
+
+  .about__p {
+    width: 90%;
+    margin-right: 0;
   }
 }
 
@@ -239,7 +233,6 @@ video:focus {
 @media all and (max-width: 768px) {
   .dignity__item {
     width: 100%;
-    min-width: 300px;
     float: none;
   }
   .dignity__item:nth-child(even) {
@@ -260,10 +253,6 @@ video:focus {
   .dignity__item:nth-child(even) {
     float: none;
   }
-  
-  .dignity {
-    width: 100vw;
-  }
 
   .dignity__item {
     padding-right: 28px;
@@ -279,7 +268,8 @@ video:focus {
 /*Screenshots*/
 
 .screenshots {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
+  padding-top: 0;
 }
 
 .screenshots__img {
@@ -312,11 +302,10 @@ video:focus {
 @media all and (max-width: 992px) {
   .screenshots__article {
     width: 100%;
-    min-width: 300px;
   }
 }
 
-@media all and (max-width: 550px) {
+@media all and (max-width: 500px) {
   .screenshots__article {
     position: relative;
     padding-top: 35px;
@@ -344,6 +333,15 @@ video:focus {
   }
   h2 {
     margin-top: 23px;
+  }
+}
+
+@media all and (max-width: 406px) {
+  .screenshots__h3 {
+    font-size: 20px;
+  }
+  .screenshots__article {
+    padding-top: 50px;
   }
 }
 
@@ -431,15 +429,15 @@ video:focus {
 }
 
 @media all and (max-width: 500px) {
-    .reviews {
-        padding-left: 0;
-        padding-right: 0;
-    }
-} 
+  .reviews {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 
 /*Buy*/
 .buy {
-  padding: 0;
+  padding: 0 0 50px 0;
 }
 
 .buy__wrap {
@@ -454,11 +452,13 @@ video:focus {
   min-width: 23.4375%;
   margin: 0 22px;
   border-radius: 5px;
-  margin-bottom: 50px;
 }
 
 .buy__h2 {
-  margin-top: $paddCommon;
+  padding-top: $paddCommon;
+  margin-top: 0;
+  text-shadow: 1px 1px 5px #fff;
+  color: black;
 }
 
 .buy__h3 {
@@ -511,6 +511,30 @@ video:focus {
   color: #fff;
 }
 
+.main {
+    position: relative;
+}
+
+.buy__background {
+    width: 100%;
+    height: 30%;
+    object-fit: cover;
+    object-position: center center;
+    position: absolute;
+    bottom: 0;
+    z-index: -2;
+}
+
+@media all and (max-width: 1200px) {
+    
+    .buy__set {
+        margin-bottom: 50px;
+    }
+    .buy__set:last-child {
+        margin-bottom: 0;
+    }
+}
+
 /*Footer*/
 
 .footer {
@@ -558,8 +582,8 @@ video:focus {
 
 input:focus,
 textarea:focus {
-    border: none;
-    outline: none;
+  border: none;
+  outline: none;
 }
 
 @media all and (max-width: 992px) {
@@ -627,27 +651,25 @@ textarea:focus {
 }
 
 @media all and (min-width: 500px) and (max-width: 992px) {
-    .screenshots__h2 {
-        margin-top: 50px;
-    }
-    .reviews__h2 {
-        padding-top: 50px;
-    }
-    .screenshots {
-        margin-bottom: 50px;
-    }
-    .reviews__quote {
-        font-size: 14px;
-    }
-    
+  .screenshots__h2 {
+    margin-top: 50px;
+  }
+  .reviews__h2 {
+    padding-top: 50px;
+  }
+  .screenshots {
+    margin-bottom: 50px;
+  }
+  .reviews__quote {
+    font-size: 14px;
+  }
 }
 
 @media all and (min-width: 992px) {
-    .screenshots__h2 {
-        margin-top: 50px;
-    }
-    .reviews__h2 {
-        padding-top: 50px;
-    }
-    
+  .screenshots__h2 {
+    margin-top: 50px;
+  }
+  .reviews__h2 {
+    padding-top: 50px;
+  }
 }
