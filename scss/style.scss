@@ -66,6 +66,11 @@ html body a:hover {
   padding: $paddCommon;
 }
 
+::selection {
+    color: #7F207B;
+    background-color: orange;
+}
+
 /*Header*/
 header {
   background-color: $gray;
@@ -97,7 +102,7 @@ header {
   padding: 7px 0 7px 2em;
 }
 
-.header_image {
+.header__video {
   float: right;
   /*width: 469px;
     height: 214px;*/
@@ -116,14 +121,14 @@ video:focus {
 }
 
 @media all and (min-width: 768px) and (max-width: 991px) {
-  .header_image {
+  .header__video {
     float: none;
     margin-top: 40px;
   }
 }
 
 @media all and (max-width: 768px) {
-  .header_image {
+  .header__video {
     float: none;
     width: 90%;
     margin-top: 40px;
@@ -131,14 +136,14 @@ video:focus {
 }
 
 @media all and (max-width: 991px) {
-  .header_image {
+  .header__video {
     float: none;
     margin: 0 auto;
     }
 }
 
 @media all and (max-width: 500px) {
-  .header_image {
+  .header__video {
     width: 90%;
     margin: 0;
   }
@@ -522,7 +527,7 @@ video:focus {
     object-position: center center;
     position: absolute;
     bottom: 0;
-    z-index: -2;
+    z-index: -1;
 }
 
 @media all and (max-width: 1200px) {
@@ -580,6 +585,14 @@ video:focus {
   padding: 14px 0 14px 10px;
 }
 
+.number {
+    width: 180px;
+}
+
+.number:out-of-range {
+    background-color: rgb(250, 79, 79);
+}
+
 input:focus,
 textarea:focus {
   border: none;
@@ -587,7 +600,7 @@ textarea:focus {
 }
 
 @media all and (max-width: 992px) {
-  .form__field {
+  .form__field:not(.number) {
     width: 80vw;
   }
   .socials {
@@ -621,8 +634,19 @@ textarea:focus {
 }
 
 .socials__buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.socials__buttons_item {
   font-family: Socialico;
   font-size: 62px;
+  color: #fff;
+}
+
+.socials__buttons_item:hover {
+    color: #9fb5ff;
 }
 
 .skype {
@@ -673,3 +697,37 @@ textarea:focus {
     padding-top: 50px;
   }
 }
+
+/*Placeholder vanishes when focused*/
+.form__field::-webkit-input-placeholder {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+  }
+  .form__field::-moz-placeholder {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+  }
+  .form__field:-moz-placeholder {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+  }
+  .form__field:-ms-input-placeholder {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+  }
+  .form__field:focus::-webkit-input-placeholder {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  .form__field:focus::-moz-placeholder {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  .form__field:focus:-moz-placeholder {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  .form__field:focus:-ms-input-placeholder {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }

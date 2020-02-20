@@ -23,8 +23,7 @@
                     <li class="header__item">Associate the page with the payment system</li>
                 </ul>
             </div>
-            <!--<img class="header_image col-md-6" src="img/103.jpg" alt="header photo">-->
-            <video class="header_image" src="video/dance.mp4" controls muted loop poster="img/cat.jpg"></video>
+            <video class="header__video" src="video/dance.mp4" controls muted loop poster="img/cat.jpg"></video>
         </header>
 
         <main class="main">
@@ -235,8 +234,21 @@
     <footer class="footer">
         <h2 class="footer__h2">Contacts</h2>
         <form action="form.php" class="form">
-            <input class="form__name form__field" type="text" placeholder="Your name:" required>
-            <input class="form__email form__field" type="email" placeholder="Your email:" required>
+            <input list="name" class="form__name form__field" type="text" placeholder="Your name:" required>
+            <datalist id="name">
+                <option value="Люк Скайуокер"></option>
+                <option value="Принцесса Лея"></option>
+                <option value="Дарт Вейдер"></option>
+                <option value="Чубакка"></option>
+            </datalist>
+            <input list="email" class="form__email form__field" type="email" placeholder="Your email:" required>
+            <datalist id="email">
+                <option value="luke_skywalker@gmail.com"></option>
+                <option value="princess_leia@gmail.com"></option>
+                <option value="darth_vader@gmail.com"></option>
+                <option value="chewbacca@gmail.com"></option>
+            </datalist>
+            <input type="number" placeholder="Your age:" class="form__field number" min="1" max="150">
             <textarea class="form__message form__field" cols="30" rows="10" placeholder="Your message:"
                 required></textarea>
             <input class="form__send" type="submit" value="SEND">
@@ -249,7 +261,11 @@
                 <a href="#" class="socials__contact phone">80 00 4568 55 55</a>
             </div>
             <p class="socials__buttons">
-                lfigx
+                <a href="#" class="socials__buttons_item">l</a>
+                <a href="#" class="socials__buttons_item">f</a>
+                <a href="#" class="socials__buttons_item">i</a>
+                <a href="#" class="socials__buttons_item">g</a>
+                <a href="#" class="socials__buttons_item">x</a>
             </p>
         </address>
     </footer>
